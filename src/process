@@ -1,13 +1,13 @@
 Components
     [] Calculator
-        []Display
+        []Display[50min]
             []Expression
             []Result
-        []CalculatorButtons
+        []CalculatorButtons[2hr]
             []RoundButton
-[]CalculatorButtonConstants
-[]CalculatorStore
-    []@observable Expression
+[]CalculatorButtonConstants[10min]
+[]CalculatorStore[1:30hr]
+    []@observable expression
     []setExpression
     []deleteLastCharFromExpression
     []clearExpresssion
