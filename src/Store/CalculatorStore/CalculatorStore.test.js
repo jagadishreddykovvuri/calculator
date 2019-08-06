@@ -14,4 +14,8 @@ describe("CalculatorStore", () => {
     calculatorStore.clearExpression();
     expect(calculatorStore.expression).toBe("");
   });
+  it("should able to delete the last character of expression on calling Delete", () => {
+    calculatorStore.deleteLastCharFromExpression();
+    expect(calculatorStore.expression).toBe("10+2");
+  });
 });
