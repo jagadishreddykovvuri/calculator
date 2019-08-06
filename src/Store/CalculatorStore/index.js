@@ -12,21 +12,21 @@ class CalculatorStore {
   @action.bound deleteLastCharFromExpression() {
     this.expression = this.expression.slice(0, -1);
   }
-
-  @computed get isInvalidExpression() {
-    if (this.expression === "") {
-      return true;
-    }
-    const lastChar = this.expression[this.expression.length - 1];
-    console.log(lastChar);
-    if (
-      lastChar === null ||
+  returnTrue = lastChar => {
+    return (
+      lastChar === undefined ||
       lastChar === "+" ||
       lastChar === "-" ||
       lastChar === "*" ||
       lastChar === "/" ||
       lastChar === "%"
-    ) {
+    );
+  };
+
+  @computed get isInvalidExpression() {
+    const lastChar = this.expression[this.expression.length - 1];
+    console.log(lastChar);
+    if (this.returnTrue(lastChar)) {
       return true;
     }
     return false;
