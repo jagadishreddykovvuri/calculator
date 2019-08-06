@@ -1,0 +1,15 @@
+Components
+    [] Calculator
+        []Display
+            []Expression
+            []Result
+        []CalculatorButtons
+            []RoundButton
+[]CalculatorButtonConstants
+[]CalculatorStore
+    []@observable Expression
+    []setExpression
+    []deleteLastCharFromExpression
+    []clearExpresssion
+    []isInvalidExpression
+    []evaluteExpression
