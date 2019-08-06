@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import { CALCULATOR_BUTTON_CONSTANTS } from "../../../CalculatorButtonConstants";
 import RoundButton from "./RoundButton/index";
+import { Div } from "./StyledComponent";
 class CalculatorButtons extends Component {
   handleButtonClick = value => {
     const { calculatorStore } = this.props;
     switch (value) {
-      case "=":
+      case CALCULATOR_BUTTON_CONSTANTS[18]:
         calculatorStore.evaluteExpression();
         break;
-      case "Del":
+      case CALCULATOR_BUTTON_CONSTANTS[2]:
         calculatorStore.deleteLastCharFromExpression();
         break;
-      case "C":
+      case CALCULATOR_BUTTON_CONSTANTS[0]:
         calculatorStore.clearExpression();
         break;
       default:
@@ -20,7 +21,7 @@ class CalculatorButtons extends Component {
   };
   render() {
     return (
-      <>
+      <Div>
         {CALCULATOR_BUTTON_CONSTANTS.map(value => {
           return (
             <RoundButton
@@ -30,7 +31,7 @@ class CalculatorButtons extends Component {
             />
           );
         })}
-      </>
+      </Div>
     );
   }
 }
