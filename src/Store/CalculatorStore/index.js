@@ -8,5 +8,8 @@ class CalculatorStore {
   @action.bound clearExpression(input) {
     this.expression = "";
   }
+  @action.bound deleteLastCharFromExpression() {
+    this.expression = this.expression.slice(0, -1);
+  }
 }
 export default CalculatorStore;
