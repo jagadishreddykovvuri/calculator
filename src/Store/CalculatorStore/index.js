@@ -2,8 +2,8 @@ import { observable, action } from "mobx";
 
 class CalculatorStore {
   @observable expression = "";
-  @action.bound setExpression(character) {
-    this.expression = this.expression + character;
+  @action.bound setExpression(input) {
+    this.expression = this.expression + input;
   }
 }
 export default CalculatorStore;
