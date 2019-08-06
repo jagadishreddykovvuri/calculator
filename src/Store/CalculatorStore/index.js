@@ -3,8 +3,14 @@ import { parse } from "whatwg-mimetype";
 
 class CalculatorStore {
   @observable expression = "";
+  @observable result = "";
   @action.bound setExpression(input) {
+    if (this.result !== "") {
+      this.result = "";
+      this.expression = "";
+    }
     this.expression = this.expression + input;
+    console.log(this.expression);
   }
   @action.bound clearExpression(input) {
     this.expression = "";
@@ -33,8 +39,10 @@ class CalculatorStore {
   }
   evaluteExpression = () => {
     try {
-      return eval(this.expression);
+      this.result = eval(this.expression);
+      return this.result;
     } catch (e) {
+      this.result = "Invalid Expression";
       return "Invalid Expression";
     }
   };
