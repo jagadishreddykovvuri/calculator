@@ -1,4 +1,4 @@
-export const CalculatorButtonConstants = [
+export const CALCULATOR_BUTTON_CONSTANTS = [
   "C",
   "%",
   "Del",
