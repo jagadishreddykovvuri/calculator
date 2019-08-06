@@ -1,4 +1,5 @@
-import { observable, action } from "mobx";
+import { observable, action, computed } from "mobx";
+import { parse } from "whatwg-mimetype";
 
 class CalculatorStore {
   @observable expression = "";
@@ -10,6 +11,25 @@ class CalculatorStore {
   }
   @action.bound deleteLastCharFromExpression() {
     this.expression = this.expression.slice(0, -1);
+  }
+
+  @computed get isInvalidExpression() {
+    if (this.expression === "") {
+      return true;
+    }
+    const lastChar = this.expression[this.expression.length - 1];
+    console.log(lastChar);
+    if (
+      lastChar === null ||
+      lastChar === "+" ||
+      lastChar === "-" ||
+      lastChar === "*" ||
+      lastChar === "/" ||
+      lastChar === "%"
+    ) {
+      return true;
+    }
+    return false;
   }
 }
 export default CalculatorStore;
