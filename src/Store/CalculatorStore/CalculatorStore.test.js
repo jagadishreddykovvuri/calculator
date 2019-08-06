@@ -31,12 +31,12 @@ describe("CalculatorStore", () => {
     calculatorStore.setExpression("+");
     expect(calculatorStore.isInvalidExpression).toBeTruthy();
   });
-  it("should the expression in calculatorStore is invalid or not", () => {
-    expect(calculatorStore.evaluteExpression).toBe(30);
+  it("should evalute expression in calculatorStore", () => {
+    expect(calculatorStore.evaluteExpression()).toBe(30);
     calculatorStore.clearExpression();
     calculatorStore.setExpression("10");
     calculatorStore.setExpression("+");
     calculatorStore.setExpression("+");
-    expect(calculatorStore.evaluteExpression).toBe("Invalid Expression");
+    expect(calculatorStore.evaluteExpression()).toBe("Invalid Expression");
   });
 });
