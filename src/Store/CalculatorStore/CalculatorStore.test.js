@@ -24,6 +24,7 @@ describe("CalculatorStore", () => {
     expect(calculatorStore.expression).toBe("10+2");
   });
   it("should the expression in calculatorStore is invalid or not", () => {
+    calculatorStore.clearExpression();
     expect(calculatorStore.isInvalidExpression).toBeTruthy();
     calculatorStore.setExpression("34");
     expect(calculatorStore.isInvalidExpression).toBeFalsy();
