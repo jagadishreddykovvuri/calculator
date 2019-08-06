@@ -4,12 +4,12 @@ Components
             []Expression
             []Result
         []CalculatorButtons[2hr]
-            []RoundButton
+            [x]RoundButton
 []CalculatorButtonConstants[10min]
 []CalculatorStore[1:30hr]
-    []@observable expression
-    []setExpression
-    []deleteLastCharFromExpression
-    []clearExpresssion
-    []isInvalidExpression
-    []evaluteExpression
+    [x]@observable expression
+    [x]setExpression
+    [x]deleteLastCharFromExpression
+    [x]clearExpresssion
+    [x]isInvalidExpression
+    [x]evaluteExpression
