@@ -4,6 +4,8 @@ export const Button = styled.button`
   height: 50px;
   border-radius: 25px;
   border: none;
+  cursor:pointer;
+  outline: none;
   margin: 2px;
   font-size:14px;
   font-weight: bold;

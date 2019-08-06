@@ -10,10 +10,10 @@ class CalculatorStore {
       this.expression = "";
     }
     this.expression = this.expression + input;
-    console.log(this.expression);
   }
   @action.bound clearExpression(input) {
     this.expression = "";
+    this.result = "";
   }
   @action.bound deleteLastCharFromExpression() {
     this.expression = this.expression.slice(0, -1);
@@ -31,7 +31,6 @@ class CalculatorStore {
 
   @computed get isInvalidExpression() {
     const lastChar = this.expression[this.expression.length - 1];
-    console.log(lastChar);
     if (this.returnTrue(lastChar)) {
       return true;
     }
