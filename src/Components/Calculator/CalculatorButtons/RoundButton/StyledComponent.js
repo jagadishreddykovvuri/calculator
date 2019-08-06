@@ -17,42 +17,13 @@ export const Button = styled.button`
       width: 100px;
     `}
   ${props =>
-    props.styler === "/" &&
+    ["/", "*", "-", "+", "="].includes(props.styler) &&
     css`
       background-color: #e48800;
     `}
-    ${props =>
-      props.styler === "*" &&
-      css`
-        background-color: #e48800;
-      `}
-    ${props =>
-      props.styler === "-" &&
-      css`
-        background-color: #e48800;
-      `}
-    ${props =>
-      props.styler === "+" &&
-      css`
-        background-color: #e48800;
-      `}
-    ${props =>
-      props.styler === "=" &&
-      css`
-        background-color: #e48800;
-      `}
+    
       ${props =>
-        props.styler === "C" &&
-        css`
-          background-color: #9e9e9e;
-        `}
-      ${props =>
-        props.styler === "%" &&
-        css`
-          background-color: #9e9e9e;
-        `}
-      ${props =>
-        props.styler === "Del" &&
+        ["C", "%", "Del"].includes(props.styler) &&
         css`
           background-color: #9e9e9e;
         `}

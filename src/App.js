@@ -6,7 +6,7 @@ import Calculator from "./Components/Calculator";
 import Counter from "./Counter";
 function App() {
   return (
-    <div>
+    <div className="App">
       <Calculator />
     </div>
   );

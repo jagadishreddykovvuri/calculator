@@ -6,4 +6,5 @@ export const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  border-radius: 20px;
 `;
