@@ -31,5 +31,12 @@ class CalculatorStore {
     }
     return false;
   }
+  evaluteExpression = () => {
+    try {
+      return eval(this.expression);
+    } catch (e) {
+      return "Invalid Expression";
+    }
+  };
 }
 export default CalculatorStore;
